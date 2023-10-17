@@ -1,17 +1,17 @@
-def trouve_cle_alphabet(message):
+def trouve_cle_alphabet(message_code):
     """
     Fonction qui permet de trouver les caractères uniques dans le message et les stocke dans une liste pour former un alphabet
     Args:
-        message (str): Message à partir duquel l'alphabet serra fait.
+        message_code (str): Message à partir duquel l'alphabet serra fait.
     Returns:
         resultat: Liste de caractères représentant un alphabet
     """
     lettre_vu = set() 
     resultat = [] 
-    for indice in range(len(message)): 
-        if message[indice] != " " and message[indice] not in lettre_vu: 
-            lettre_vu.add(message[indice])
-            resultat.append(message[indice]) 
+    for indice in range(len(message_code)): 
+        if message_code[indice] != " " and message_code[indice] not in lettre_vu: 
+            lettre_vu.add(message_code[indice])
+            resultat.append(message_code[indice]) 
     return resultat
 
 def decode_message_3(cle):
@@ -29,9 +29,9 @@ def decode_message_3(cle):
             cle.pop(indice - 1)  
             cle.insert(indice, "Y")  
         print("index :", indice)
-        print(decode_message_3_bis(message, cle), "\n")  
+        print(decode_message_3_bis(message_code, cle), "\n")  
 
-def decode_message_3_bis(message, cle):
+def decode_message_3_bis(message_code, cle):
     """
     Fonction qui permet de déchiffre un message à l'aide de l'alphabet donné
 
@@ -43,7 +43,7 @@ def decode_message_3_bis(message, cle):
         str: Message déchiffré
     """
     resultat = '' 
-    for lettre in message: 
+    for lettre in message_code: 
         if lettre in cle:  
             index = cle.index(lettre)  
             resultat += chr(index + 65) 
@@ -52,7 +52,7 @@ def decode_message_3_bis(message, cle):
     return resultat
 
 
-message = "EALOK, OKCT LOFX PLPSF! BF VKIF L ZKCASRA FTD: FBRXFEFDH"
+message_code = "EALOK, OKCT LOFX PLPSF! BF VKIF L ZKCASRA FTD: FBRXFEFDH"
 cle = trouve_cle_alphabet("""LE VIF ZEPHIR JUBILE SUR LES KUMQUATS DU CLOWN GRACIEUX""")
 
 print(decode_message_3(cle))
