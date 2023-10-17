@@ -1,11 +1,9 @@
 def dechiffrement_message1(message_code, decalage):
     """
     Fonction qui permet de déchiffrer un message chiffré avec le chiffrement de César
-
     Args :
         message_code (String) : Le message chiffré
         decalage (int) : Le décalage utilisé pour le chiffrement
-    
     Return:
         resultat (String) : Le message déchiffré
     """
@@ -28,7 +26,6 @@ def dechiffrement_message1(message_code, decalage):
 def combinaison_possible_cesar(message_code):
     """
     Fonction qui permet de déchiffrer un message chiffré avec le chiffrement de César avec toute les combinaisons possibles
-
     Args :
         message_code (String) : Le message chiffré
     """

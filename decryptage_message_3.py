@@ -2,7 +2,7 @@ def trouve_cle_alphabet(message_code):
     """
     Fonction qui permet de trouver les caractères uniques dans le message et les stocke dans une liste pour former un alphabet
     Args:
-        message_code (str): Message à partir duquel l'alphabet serra fait.
+        message_code (str): Message à déchiffrer
     Returns:
         resultat: Liste de caractères représentant un alphabet
     """
@@ -16,9 +16,7 @@ def trouve_cle_alphabet(message_code):
 
 def decode_message_3(cle):
     """
-    Fonction qui permet de réaliser un décalage des caractères de l'alphabet en insérant "Y" au début de la liste et décalant d'une position à chaque itération. 
-    Puis appele la fonction decode_message_3_bis à chaque itération
-
+    Fonction qui permet de déchiffre un message à l'aide de l'alphabet donné
     Args:
         cle (list): Liste représentant l'alphabet initial
     """
@@ -34,19 +32,17 @@ def decode_message_3(cle):
 def decode_message_3_bis(message_code, cle):
     """
     Fonction qui permet de déchiffre un message à l'aide de l'alphabet donné
-
     Args:
-        message (str): Message à déchiffrer
-        cle (list): Liste représentant l'alphabet de substitution
-
+        message_code (str): Message à déchiffrer
+        cle (list): Liste représentant l'alphabet initial
     Returns:
-        str: Message déchiffré
+        resultat (str): Message déchiffré
     """
     resultat = '' 
     for lettre in message_code: 
         if lettre in cle:  
             index = cle.index(lettre)  
-            resultat += chr(index + 65) 
+            resultat += chr(index + 65) # 65 est le code ASCII de A 
         else:
             resultat += lettre 
     return resultat

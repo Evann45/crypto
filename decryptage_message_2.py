@@ -1,11 +1,9 @@
 def dechiffrement_message_2(message_code, key):
     """
     Fonction qui déchiffre un message chiffré en utilisant le chiffrement Vigenère avec une clé donnée
-
     Args :
         message_code (String) : Le message codé
         key (String) : La clé utilisée pour le déchiffrement
-    
     Return:
         resultat (String) : Le message déchiffré
     """
