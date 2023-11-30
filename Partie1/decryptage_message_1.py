@@ -11,17 +11,16 @@ def dechiffrement_message1(message_code, decalage):
     alphabet = {lettre: i for i, lettre in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ")}
 
     for lettre in message_code:  
-        if lettre.isalpha():  
-            index = (alphabet[lettre] + decalage) % 26
+        if lettre.isalpha(): 
+            index = (alphabet[lettre]+decalage) % 26
             for cle, valeur in alphabet.items():  
-                if valeur == index: 
-                    lettre_decrypte = cle 
+                if valeur==index: 
+                    lettre_decrypte=cle 
                     break
         else:
             lettre_decrypte = lettre  
         resultat += lettre_decrypte
     return resultat
-
 
 def combinaison_possible_cesar(message_code):
     """
@@ -33,8 +32,6 @@ def combinaison_possible_cesar(message_code):
         message = dechiffrement_message1(message_code, nb)
         print("décalage de ", nb + 1, ": ", message) 
 
-
-
 message_a_dechiffrer = """BDQE PG OTQYUZ EQ OMOTQ GZ FDQEAD
 MOODAOTQ M GZ MDNDQ FAGF DQOAGHQDF P'AD
 ZQ ZQSXUSQ BME XM VQGZQ BAGOQ RQGUXXG
@@ -45,7 +42,6 @@ YMUE MFFQZFUAZ M ZQ BME XQE ODACGQD,
 YQYQ EU XM RMUY FUDMUXXQ FQE QZFDMUXXQE,
 QZ MGOGZ OME FG ZQ PAUE EGOOAYNQD
 """
-
 
 # Appel de la fonction de combinaison_possible_cesar pour tous les décalages possibles
 combinaison_possible_cesar(message_a_dechiffrer)
