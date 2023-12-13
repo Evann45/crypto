@@ -19,4 +19,4 @@ Sachez qu'il faut toujours sélectionner la case du code que vous souhaitez exé
 
 ## Attention
 
-Il faut toujours exécuter les codes afin d'avoir un bon fonctionnement des codes futurs, sauf pour la fonction cassage_brutal, car celle-ci demande beaucoup de temps, sauf si vous prenez une clé de taille plus petite.
+Il faut toujours exécuter les codes afin d'avoir un bon fonctionnement des codes futurs, sauf pour la fonction cassage_brutal avec le texte d'arsene_lupin, car celle-ci demande beaucoup de temps, sauf si vous prenez une clé de taille plus petite.
