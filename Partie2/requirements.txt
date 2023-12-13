@@ -1,0 +1,9 @@
+# Cryptographie
+cryptography==3.4.8
+pycryptodome==3.10.1
+
+# Traitement de fichiers de traces réseau
+scapy==2.4.5
+
+# Traitement d'images
+Pillow==8.2.0
